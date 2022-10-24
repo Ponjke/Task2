@@ -25,10 +25,11 @@ elif count == 2:
         s = (a * b)
         print(f"Square: {a=}  {b=}; {p=} {s=}")
 elif count == 3:
-    a, b, c = values
+    a, b, c, h = values
     a = int(a)
     b = int(b)
     c = int(c)
+    h = int(h) #Висота
     if a <= 0 or b <= 0 or c <= 0:
         print("There is no triangle")
     elif a + b <= c or c + a <= b or c + b <= a:
