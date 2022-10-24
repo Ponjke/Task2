@@ -27,7 +27,7 @@ elif count == 2:
         area = (a * b)
         print(f"Square: {a=}  {b=}; {perimeter=} {area=}")
 elif count == 3:
-    a, b, c, h = values
+    a, b, c, = values
     a = int(a)
     b = int(b)
     c = int(c)
