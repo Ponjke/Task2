@@ -3,6 +3,8 @@ input_str1 = '10'
 input_str2 = '10 20'
 input_str3 = '10 20 30'
 '''
+import math
+
 input_string = input()
 values = input_string.split()
 count = len(values)
@@ -11,9 +13,9 @@ if count == 1:
     if a <= 0:
         print("There is no circle")
     else:
-        p = (2 * 3.14 * a)
-        s = (3.14 * a**2)
-        print(f"Circle:  {a=}; {p=} {s=}")
+        perimeter = (2 * 3.14 * a)
+        area = (3.14 * a ** 2)
+        print(f"Circle:  {a=}; {perimeter=} {area=}")
 elif count == 2:
     a, b = values
     a = int(a)
@@ -21,25 +23,19 @@ elif count == 2:
     if a <= 0 or b <= 0:
         print("There is no square")
     else:
-        p = ((a + b) * 2)
-        s = (a * b)
-        print(f"Square: {a=}  {b=}; {p=} {s=}")
+        perimeter = ((a + b) * 2)
+        area = (a * b)
+        print(f"Square: {a=}  {b=}; {perimeter=} {area=}")
 elif count == 3:
     a, b, c, h = values
     a = int(a)
     b = int(b)
     c = int(c)
-    h = int(h) #Висота
     if a <= 0 or b <= 0 or c <= 0:
         print("There is no triangle")
     elif a + b <= c or c + a <= b or c + b <= a:
         print("There is no triangle")
     else:
-        p = (a + b + c)
-        s = (1/2 * c * h)
-        print(f"Triangle: {a=} {b=} {c=}; {p=} {s=}")
-
-
-a = input_string  # '10'
-a , b = values  # '10 20'
-a, b, c = values  # '10 20 30'
+        perimeter = (a + b + c)
+        area = math.sqrt(perimeter * (perimeter - a) * (perimeter - b) * (perimeter - c))
+        print(f"Triangle: {a=} {b=} {c=}; {perimeter=} {area=}")
